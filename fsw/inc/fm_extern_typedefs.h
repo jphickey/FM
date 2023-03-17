@@ -38,6 +38,8 @@
 #define FM_NAME_IS_FILE_CLOSED 3
 #define FM_NAME_IS_DIRECTORY   4
 
+#ifndef CFE_EDS_ENABLED_BUILD
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
 /* FM free space table entry state definitions                     */
@@ -46,6 +48,8 @@
 
 #define FM_TABLE_ENTRY_DISABLED 0
 #define FM_TABLE_ENTRY_ENABLED  1
+
+#endif
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */

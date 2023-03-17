@@ -160,25 +160,6 @@
 /*                                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/**
- * \brief Directory List Telemetry Packet Entry Count
- *
- *  \par Description:
- *       This definition sets the number of directory entries contained
- *       in the Directory List telemetry packet.  The command handler will
- *       read directory entries until reaching the index of the start entry
- *       (set via command argument) and then continue to read
- *       directory entries and populate the telemtry packet until there are
- *       either no more unread directory entries or until the telemetry
- *       packet is full.
- *
- *  \par Limits:
- *       The FM application limits this value to be no less than 10 and
- *       and no greater than 100. The number of directory entries in the
- *       telemetry packet will in large part determine the packet size.
- */
-#define FM_DIR_LIST_PKT_ENTRIES 20
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
 /* FM platform configuration parameters - child task definitions   */
@@ -415,6 +396,23 @@
 #define FM_TABLE_DEF_DESC "FM File System Free Space Table"
 
 /**
+ * \brief Table Data Validation Error Code
+ *
+ *  \par Description:
+ *       Table data is verified during the table load process.  Should
+ *       the validation process fail, this value will be returned by
+ *       FM to cFE Table Services and displayed in an event message.
+ *
+ *  \par Limits:
+ *       FM requires that this value be defined, but otherwise places
+ *       no limits on the definition.  Refer to cFE Table Services
+ *       for limits related to error return values.
+ */
+#define FM_TABLE_VALIDATION_ERR (-1)
+
+#ifndef CFE_EDS_ENABLED_BUILD
+
+/**
  * \brief Number of Free Space Table Entries
  *
  *  \par Description:
@@ -430,19 +428,25 @@
 #define FM_TABLE_ENTRY_COUNT 8
 
 /**
- * \brief Table Data Validation Error Code
+ * \brief Directory List Telemetry Packet Entry Count
  *
  *  \par Description:
- *       Table data is verified during the table load process.  Should
- *       the validation process fail, this value will be returned by
- *       FM to cFE Table Services and displayed in an event message.
+ *       This definition sets the number of directory entries contained
+ *       in the Directory List telemetry packet.  The command handler will
+ *       read directory entries until reaching the index of the start entry
+ *       (set via command argument) and then continue to read
+ *       directory entries and populate the telemtry packet until there are
+ *       either no more unread directory entries or until the telemetry
+ *       packet is full.
  *
  *  \par Limits:
- *       FM requires that this value be defined, but otherwise places
- *       no limits on the definition.  Refer to cFE Table Services
- *       for limits related to error return values.
+ *       The FM application limits this value to be no less than 10 and
+ *       and no greater than 100. The number of directory entries in the
+ *       telemetry packet will in large part determine the packet size.
  */
-#define FM_TABLE_VALIDATION_ERR (-1)
+#define FM_DIR_LIST_PKT_ENTRIES 20
+
+#endif
 
 /**\}*/
 

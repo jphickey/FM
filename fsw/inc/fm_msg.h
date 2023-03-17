@@ -28,6 +28,12 @@
 #include <fm_platform_cfg.h>
 #include <fm_extern_typedefs.h>
 
+#ifdef CFE_EDS_ENABLED_BUILD
+
+#include "fm_eds_typedefs.h"
+
+#else
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
 /* FM -- command packet structures                                 */
@@ -646,6 +652,8 @@ typedef struct
 {
     FM_MonitorTableEntry_t Entries[FM_TABLE_ENTRY_COUNT]; /**< \brief One entry for each monitor */
 } FM_MonitorTable_t;
+
+#endif
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
