@@ -57,7 +57,7 @@ typedef union
     FM_DeleteDirectoryCmd_t        DeleteDirectoryCmd;
     FM_GetDirListFileCmd_t         GetDirListFileCmd;
     FM_GetDirListPktCmd_t          GetDirListPktCmd;
-    FM_MonitorFilesystemSpaceCmd_t GetFreeSpaceCmd;
+    FM_MonitorFilesystemSpaceCmd_t MonitorFilesystemSpaceCmd;
     FM_SetTableStateCmd_t          SetTableStateCmd;
     FM_SetPermissionsCmd_t         SetPermissionsCmd;
 } UT_CmdBuf_t;

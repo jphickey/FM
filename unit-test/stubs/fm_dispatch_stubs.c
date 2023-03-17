@@ -28,6 +28,182 @@
 
 /*
  * ----------------------------------------------------
+ * Generated stub function for FM_ConcatFilesVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_ConcatFilesVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_ConcatFilesVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_ConcatFilesVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_ConcatFilesVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_ConcatFilesVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_CopyFileVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_CopyFileVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_CopyFileVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_CopyFileVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_CopyFileVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_CopyFileVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_CreateDirectoryVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_CreateDirectoryVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_CreateDirectoryVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_CreateDirectoryVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_CreateDirectoryVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_CreateDirectoryVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_DecompressFileVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_DecompressFileVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_DecompressFileVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_DecompressFileVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_DecompressFileVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_DecompressFileVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_DeleteAllFilesVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_DeleteAllFilesVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_DeleteAllFilesVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_DeleteAllFilesVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_DeleteAllFilesVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_DeleteAllFilesVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_DeleteDirectoryVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_DeleteDirectoryVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_DeleteDirectoryVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_DeleteDirectoryVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_DeleteDirectoryVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_DeleteDirectoryVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_DeleteFileVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_DeleteFileVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_DeleteFileVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_DeleteFileVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_DeleteFileVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_DeleteFileVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_GetDirListFileVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_GetDirListFileVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_GetDirListFileVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_GetDirListFileVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_GetDirListFileVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_GetDirListFileVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_GetDirListPktVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_GetDirListPktVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_GetDirListPktVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_GetDirListPktVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_GetDirListPktVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_GetDirListPktVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_GetFileInfoVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_GetFileInfoVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_GetFileInfoVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_GetFileInfoVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_GetFileInfoVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_GetFileInfoVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_GetOpenFilesVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_GetOpenFilesVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_GetOpenFilesVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_GetOpenFilesVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_GetOpenFilesVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_GetOpenFilesVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
  * Generated stub function for FM_IsValidCmdPktLength()
  * ----------------------------------------------------
  */
@@ -43,6 +219,54 @@ bool FM_IsValidCmdPktLength(const CFE_MSG_Message_t *MsgPtr, size_t ExpectedLeng
     UT_GenStub_Execute(FM_IsValidCmdPktLength, Basic, NULL);
 
     return UT_GenStub_GetReturnValue(FM_IsValidCmdPktLength, bool);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_MonitorFilesystemSpaceVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_MonitorFilesystemSpaceVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_MonitorFilesystemSpaceVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_MonitorFilesystemSpaceVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_MonitorFilesystemSpaceVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_MonitorFilesystemSpaceVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_MoveFileVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_MoveFileVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_MoveFileVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_MoveFileVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_MoveFileVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_MoveFileVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_NoopVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_NoopVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_NoopVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_NoopVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_NoopVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_NoopVerifyDispatch, CFE_Status_t);
 }
 
 /*
@@ -67,4 +291,84 @@ void FM_ProcessPkt(const CFE_SB_Buffer_t *BufPtr)
     UT_GenStub_AddParam(FM_ProcessPkt, const CFE_SB_Buffer_t *, BufPtr);
 
     UT_GenStub_Execute(FM_ProcessPkt, Basic, NULL);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_RenameFileVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_RenameFileVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_RenameFileVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_RenameFileVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_RenameFileVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_RenameFileVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_ResetCountersVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_ResetCountersVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_ResetCountersVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_ResetCountersVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_ResetCountersVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_ResetCountersVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_SendHkVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_SendHkVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_SendHkVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_SendHkVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_SendHkVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_SendHkVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_SetPermissionsVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_SetPermissionsVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_SetPermissionsVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_SetPermissionsVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_SetPermissionsVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_SetPermissionsVerifyDispatch, CFE_Status_t);
+}
+
+/*
+ * ----------------------------------------------------
+ * Generated stub function for FM_SetTableStateVerifyDispatch()
+ * ----------------------------------------------------
+ */
+CFE_Status_t FM_SetTableStateVerifyDispatch(const CFE_SB_Buffer_t *BufPtr)
+{
+    UT_GenStub_SetupReturnBuffer(FM_SetTableStateVerifyDispatch, CFE_Status_t);
+
+    UT_GenStub_AddParam(FM_SetTableStateVerifyDispatch, const CFE_SB_Buffer_t *, BufPtr);
+
+    UT_GenStub_Execute(FM_SetTableStateVerifyDispatch, Basic, NULL);
+
+    return UT_GenStub_GetReturnValue(FM_SetTableStateVerifyDispatch, CFE_Status_t);
 }

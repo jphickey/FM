@@ -246,7 +246,7 @@ int32 FM_AppInit(void)
 /* FM application -- housekeeping request packet processor         */
 /*                                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-void FM_SendHkCmd(const CFE_SB_Buffer_t *BufPtr)
+CFE_Status_t FM_SendHkCmd(const FM_SendHkCmd_t *MsgPtr)
 {
     FM_HousekeepingPkt_Payload_t *PayloadPtr;
 
@@ -279,4 +279,6 @@ void FM_SendHkCmd(const CFE_SB_Buffer_t *BufPtr)
 
     CFE_SB_TimeStampMsg(CFE_MSG_PTR(FM_GlobalData.HousekeepingPkt.TelemetryHeader));
     CFE_SB_TransmitMsg(CFE_MSG_PTR(FM_GlobalData.HousekeepingPkt.TelemetryHeader), true);
+
+    return CFE_SUCCESS;
 }
