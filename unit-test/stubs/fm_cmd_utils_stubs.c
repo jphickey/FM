@@ -77,7 +77,7 @@ uint32 FM_GetFilenameState(const char *Filename, size_t BufferSize, bool FileInf
     UT_GenStub_SetupReturnBuffer(FM_GetFilenameState, uint32);
 
     UT_GenStub_AddParam(FM_GetFilenameState, const char *, Filename);
-    UT_GenStub_AddParam(FM_GetFilenameState, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_GetFilenameState, size_t, BufferSize);
     UT_GenStub_AddParam(FM_GetFilenameState, bool, FileInfoCmd);
 
     UT_GenStub_Execute(FM_GetFilenameState, Basic, NULL);
@@ -157,7 +157,7 @@ bool FM_VerifyDirExists(const char *Directory, size_t BufferSize, uint32 EventID
     UT_GenStub_SetupReturnBuffer(FM_VerifyDirExists, bool);
 
     UT_GenStub_AddParam(FM_VerifyDirExists, const char *, Directory);
-    UT_GenStub_AddParam(FM_VerifyDirExists, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyDirExists, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyDirExists, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyDirExists, const char *, CmdText);
 
@@ -176,7 +176,7 @@ bool FM_VerifyDirNoExist(const char *Name, size_t BufferSize, uint32 EventID, co
     UT_GenStub_SetupReturnBuffer(FM_VerifyDirNoExist, bool);
 
     UT_GenStub_AddParam(FM_VerifyDirNoExist, const char *, Name);
-    UT_GenStub_AddParam(FM_VerifyDirNoExist, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyDirNoExist, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyDirNoExist, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyDirNoExist, const char *, CmdText);
 
@@ -195,7 +195,7 @@ bool FM_VerifyFileClosed(const char *Filename, size_t BufferSize, uint32 EventID
     UT_GenStub_SetupReturnBuffer(FM_VerifyFileClosed, bool);
 
     UT_GenStub_AddParam(FM_VerifyFileClosed, const char *, Filename);
-    UT_GenStub_AddParam(FM_VerifyFileClosed, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyFileClosed, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyFileClosed, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyFileClosed, const char *, CmdText);
 
@@ -214,7 +214,7 @@ bool FM_VerifyFileExists(const char *Filename, size_t BufferSize, uint32 EventID
     UT_GenStub_SetupReturnBuffer(FM_VerifyFileExists, bool);
 
     UT_GenStub_AddParam(FM_VerifyFileExists, const char *, Filename);
-    UT_GenStub_AddParam(FM_VerifyFileExists, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyFileExists, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyFileExists, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyFileExists, const char *, CmdText);
 
@@ -233,7 +233,7 @@ bool FM_VerifyFileNoExist(const char *Filename, size_t BufferSize, uint32 EventI
     UT_GenStub_SetupReturnBuffer(FM_VerifyFileNoExist, bool);
 
     UT_GenStub_AddParam(FM_VerifyFileNoExist, const char *, Filename);
-    UT_GenStub_AddParam(FM_VerifyFileNoExist, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyFileNoExist, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyFileNoExist, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyFileNoExist, const char *, CmdText);
 
@@ -252,7 +252,7 @@ bool FM_VerifyFileNotOpen(const char *Filename, size_t BufferSize, uint32 EventI
     UT_GenStub_SetupReturnBuffer(FM_VerifyFileNotOpen, bool);
 
     UT_GenStub_AddParam(FM_VerifyFileNotOpen, const char *, Filename);
-    UT_GenStub_AddParam(FM_VerifyFileNotOpen, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyFileNotOpen, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyFileNotOpen, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyFileNotOpen, const char *, CmdText);
 
@@ -273,7 +273,7 @@ bool FM_VerifyFileState(FM_File_States State, const char *Filename, size_t Buffe
 
     UT_GenStub_AddParam(FM_VerifyFileState, FM_File_States, State);
     UT_GenStub_AddParam(FM_VerifyFileState, const char *, Filename);
-    UT_GenStub_AddParam(FM_VerifyFileState, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyFileState, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyFileState, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyFileState, const char *, CmdText);
 
@@ -292,7 +292,7 @@ uint32 FM_VerifyNameValid(const char *Name, size_t BufferSize, uint32 EventID, c
     UT_GenStub_SetupReturnBuffer(FM_VerifyNameValid, uint32);
 
     UT_GenStub_AddParam(FM_VerifyNameValid, const char *, Name);
-    UT_GenStub_AddParam(FM_VerifyNameValid, uint32, BufferSize);
+    UT_GenStub_AddParam(FM_VerifyNameValid, size_t, BufferSize);
     UT_GenStub_AddParam(FM_VerifyNameValid, uint32, EventID);
     UT_GenStub_AddParam(FM_VerifyNameValid, const char *, CmdText);
 

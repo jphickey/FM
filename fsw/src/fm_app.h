@@ -26,6 +26,8 @@
 
 #include "cfe.h"
 #include "fm_msg.h"
+#include "fm_tbl.h"
+#include "fm_child.h"
 #include "fm_compression.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -42,6 +44,7 @@
  *      message was received or not.
  */
 #define FM_SB_TIMEOUT 1000
+
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */

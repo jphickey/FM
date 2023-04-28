@@ -32,7 +32,7 @@
 #include "cfe.h"
 #include "cfe_tbl_filedef.h"
 #include "fm_platform_cfg.h"
-#include "fm_msg.h"
+#include "fm_tbl.h"
 
 /*
 ** FM file system free space table header

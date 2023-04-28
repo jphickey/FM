@@ -16,7 +16,7 @@ set(APP_SRC_FILES
   fsw/src/fm_cmds.c
   fsw/src/fm_child.c
   fsw/src/fm_dispatch.c
-  fsw/src/fm_tbl.c
+  fsw/src/fm_configtable.c
 )
 
 # If compression features are enabled, choose the adapter based on the selected implementation

@@ -28,6 +28,37 @@
 #include "cfe.h"
 #include "fm_msg.h"
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*                                                                 */
+/* FM filename status definitions                                  */
+/*                                                                 */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#define FM_NAME_IS_INVALID     0
+#define FM_NAME_IS_NOT_IN_USE  1
+#define FM_NAME_IS_FILE_OPEN   2
+#define FM_NAME_IS_FILE_CLOSED 3
+#define FM_NAME_IS_DIRECTORY   4
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*                                                                 */
+/* FM directory entry definitions                                  */
+/*                                                                 */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#define FM_THIS_DIRECTORY   "."
+#define FM_PARENT_DIRECTORY ".."
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*                                                                 */
+/* FM argument to not calculate CRC during Get File Info command   */
+/*                                                                 */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#define FM_IGNORE_CRC 0
+
+
+
 /************************************************************************
  * Type Definitions
  ************************************************************************/

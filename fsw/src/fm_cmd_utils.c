@@ -31,7 +31,7 @@
 #include "fm_cmd_utils.h"
 #include "fm_child.h"
 #include "fm_perfids.h"
-#include "fm_events.h"
+#include "fm_eventids.h"
 
 #include <string.h>
 #include <ctype.h>
