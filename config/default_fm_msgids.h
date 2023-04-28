@@ -25,13 +25,15 @@
 #ifndef FM_MSGIDS_H
 #define FM_MSGIDS_H
 
+#include "cfe_msgids.h"
+
 /**
  * \defgroup cfsfmcmdmid CFS File Manager Command Message IDs
  * \{
  */
 
-#define FM_CMD_MID     0x188C /** < \brief FM ground commands */
-#define FM_SEND_HK_MID 0x188D /** < \brief FM send housekeeping */
+#define FM_CMD_MID     CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_FM_CMD_TOPICID) /** < \brief FM ground commands */
+#define FM_SEND_HK_MID CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_FM_SEND_HK_TOPICID) /** < \brief FM send housekeeping */
 
 /**\}*/
 
@@ -40,11 +42,11 @@
  * \{
  */
 
-#define FM_HK_TLM_MID         0x088A /** < \brief FM housekeeping */
-#define FM_FILE_INFO_TLM_MID  0x088B /** < \brief FM get file info */
-#define FM_DIR_LIST_TLM_MID   0x088C /** < \brief FM get dir list */
-#define FM_OPEN_FILES_TLM_MID 0x088D /** < \brief FM get open files */
-#define FM_FREE_SPACE_TLM_MID 0x088E /** < \brief FM get free space */
+#define FM_HK_TLM_MID         CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_FM_HK_TLM_TOPICID) /** < \brief FM housekeeping */
+#define FM_FILE_INFO_TLM_MID  CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_FM_FILE_INFO_TLM_TOPICID) /** < \brief FM get file info */
+#define FM_DIR_LIST_TLM_MID   CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_FM_DIR_LIST_TLM_TOPICID) /** < \brief FM get dir list */
+#define FM_OPEN_FILES_TLM_MID CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_FM_OPEN_FILES_TLM_TOPICID) /** < \brief FM get open files */
+#define FM_FREE_SPACE_TLM_MID CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_FM_MONITOR_TLM_TOPICID) /** < \brief FM get free space */
 
 /**\}*/
 

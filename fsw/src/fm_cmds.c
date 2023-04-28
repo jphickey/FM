@@ -307,7 +307,7 @@ CFE_Status_t FM_DeleteFileCmd(const FM_DeleteFileCmd_t *MsgPtr)
         CmdArgs = &FM_GlobalData.ChildQueue[FM_GlobalData.ChildWriteIndex];
 
         /* Set handshake queue command args - might be global or internal CC */
-        CFE_MSG_GetFcnCode(CFE_MSG_PTR(MsgPtr->CommandHeader), &CmdArgs->CommandCode);
+        CFE_MSG_GetFcnCode(CFE_MSG_PTR(*MsgPtr), &CmdArgs->CommandCode);
         strncpy(CmdArgs->Source1, CmdPtr->Filename, OS_MAX_PATH_LEN - 1);
         CmdArgs->Source1[OS_MAX_PATH_LEN - 1] = '\0';
 
