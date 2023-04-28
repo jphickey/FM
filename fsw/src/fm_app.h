@@ -26,6 +26,8 @@
 
 #include "cfe.h"
 #include "fm_msg.h"
+#include "fm_tbl.h"
+#include "fm_child.h"
 #include "fm_compression.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -42,6 +44,7 @@
  *      message was received or not.
  */
 #define FM_SB_TIMEOUT 1000
+
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
@@ -174,11 +177,11 @@ int32 FM_AppInit(void);
  *
  *  \par Assumptions, External Events, and Notes: None
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
  *  \sa #FM_SendHkCmd_t, #FM_HousekeepingPkt_t
  */
-void FM_SendHkCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_SendHkCmd(const FM_SendHkCmd_t *MsgPtr);
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */

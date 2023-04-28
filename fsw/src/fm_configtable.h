@@ -21,11 +21,11 @@
  * @file
  *   Unit specification for the CFS File Manager table structures.
  */
-#ifndef FM_TBL_H
-#define FM_TBL_H
+#ifndef FM_CONFIGTABLE_H
+#define FM_CONFIGTABLE_H
 
-#include "cfe.h"
-#include "fm_msg.h"
+#include "common_types.h"
+#include "fm_tbl.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */

@@ -17,7 +17,7 @@ add_cfe_coverage_stubs("fm_internal"
   stubs/fm_dispatch_stubs.c
   stubs/fm_app_stubs.c
   stubs/fm_child_stubs.c
-  stubs/fm_tbl_stubs.c
+  stubs/fm_configtable_stubs.c
 )
 
 # Link with the cfe core stubs and unit test assert libs

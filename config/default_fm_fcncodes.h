@@ -22,8 +22,8 @@
  *   Specification for the CFS FM command and telemetry message
  *   macro definitions.
  */
-#ifndef FM_MSGDEFS_H
-#define FM_MSGDEFS_H
+#ifndef FM_FCNCODES_H
+#define FM_FCNCODES_H
 
 /**
  * \defgroup cfsfmcmdcodes CFS File Manager Command Codes

@@ -25,8 +25,8 @@
 #include "cfe.h"
 #include "fm_platform_cfg.h"
 #include "fm_app.h"
-#include "fm_tbl.h"
-#include "fm_events.h"
+#include "fm_configtable.h"
+#include "fm_eventids.h"
 
 #include <string.h>
 

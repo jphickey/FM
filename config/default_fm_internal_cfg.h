@@ -22,8 +22,8 @@
  *   Specification for the CFS FM application constants
  *   that can be configured from one platform to another
  */
-#ifndef FM_PLATFORM_CFG_H
-#define FM_PLATFORM_CFG_H
+#ifndef FM_INTERNAL_CFG_H
+#define FM_INTERNAL_CFG_H
 
 /**
  * \defgroup cfsfmplatformcfg CFS File Manager Platform Configuration
@@ -153,31 +153,6 @@
  *       The FM application places no limits on this unsigned 32 bit value.
  */
 #define FM_DIR_LIST_FILE_SUBTYPE 12345
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/*                                                                 */
-/* FM platform configuration parameters - TLM packet definitions   */
-/*                                                                 */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-/**
- * \brief Directory List Telemetry Packet Entry Count
- *
- *  \par Description:
- *       This definition sets the number of directory entries contained
- *       in the Directory List telemetry packet.  The command handler will
- *       read directory entries until reaching the index of the start entry
- *       (set via command argument) and then continue to read
- *       directory entries and populate the telemtry packet until there are
- *       either no more unread directory entries or until the telemetry
- *       packet is full.
- *
- *  \par Limits:
- *       The FM application limits this value to be no less than 10 and
- *       and no greater than 100. The number of directory entries in the
- *       telemetry packet will in large part determine the packet size.
- */
-#define FM_DIR_LIST_PKT_ENTRIES 20
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
@@ -413,21 +388,6 @@
  *       for limits related to table descriptive text.
  */
 #define FM_TABLE_DEF_DESC "FM File System Free Space Table"
-
-/**
- * \brief Number of Free Space Table Entries
- *
- *  \par Description:
- *       This value defines the number of entries in both the FM file system
- *       free space table and the FM file system free space telemetry packet.
- *       Note: this value does not define the number of file systems present
- *       or supported by the CFE-OSAL, the value only defines the number of
- *       file systems for which FM may be enabled to report free space data.
- *
- *  \par Limits:
- *       FM limits this value to be not less than 1 and not greater than 32.
- */
-#define FM_TABLE_ENTRY_COUNT 8
 
 /**
  * \brief Table Data Validation Error Code

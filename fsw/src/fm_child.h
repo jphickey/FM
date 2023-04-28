@@ -29,6 +29,31 @@
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
+/* FM -- child task interface command queue entry                  */
+/*                                                                 */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/**
+ *  \brief Child Task Interface command queue entry structure
+ */
+typedef struct
+{
+    CFE_MSG_FcnCode_t CommandCode;              /**< \brief Command code - identifies the command */
+    uint32            DirListOffset;            /**< \brief Starting entry for dir list commands */
+    uint32            FileInfoState;            /**< \brief File info state */
+    uint32            FileInfoSize;             /**< \brief File info size */
+    uint32            FileInfoTime;             /**< \brief File info time */
+    uint32            FileInfoCRC;              /**< \brief File info CRC method */
+    char              Source1[OS_MAX_PATH_LEN]; /**< \brief First source file or directory name command argument */
+    char              Source2[OS_MAX_PATH_LEN]; /**< \brief Second source filename command argument */
+    char              Target[OS_MAX_PATH_LEN];  /**< \brief Target filename command argument */
+    uint8             GetSizeTimeMode; /**< \brief Whether to invoke stat call for size and time (CPU intensive) */
+    uint32            Mode;            /**< \brief File Mode */
+} FM_ChildQueueEntry_t;
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*                                                                 */
 /* FM child task global function prototypes                        */
 /*                                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

@@ -35,12 +35,12 @@
 #include "fm_msgdefs.h"
 #include "fm_msgids.h"
 #include "fm_app.h"
-#include "fm_tbl.h"
+#include "fm_configtable.h"
 #include "fm_child.h"
 #include "fm_cmds.h"
 #include "fm_cmd_utils.h"
 #include "fm_dispatch.h"
-#include "fm_events.h"
+#include "fm_eventids.h"
 #include "fm_perfids.h"
 #include "fm_platform_cfg.h"
 #include "fm_version.h"
@@ -246,7 +246,7 @@ int32 FM_AppInit(void)
 /* FM application -- housekeeping request packet processor         */
 /*                                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-void FM_SendHkCmd(const CFE_SB_Buffer_t *BufPtr)
+CFE_Status_t FM_SendHkCmd(const FM_SendHkCmd_t *MsgPtr)
 {
     FM_HousekeepingPkt_Payload_t *PayloadPtr;
 
@@ -279,4 +279,6 @@ void FM_SendHkCmd(const CFE_SB_Buffer_t *BufPtr)
 
     CFE_SB_TimeStampMsg(CFE_MSG_PTR(FM_GlobalData.HousekeepingPkt.TelemetryHeader));
     CFE_SB_TransmitMsg(CFE_MSG_PTR(FM_GlobalData.HousekeepingPkt.TelemetryHeader), true);
+
+    return CFE_SUCCESS;
 }

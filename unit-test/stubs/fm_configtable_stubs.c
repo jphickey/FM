@@ -20,10 +20,10 @@
 /**
  * @file
  *
- * Auto-Generated stub implementations for functions defined in fm_tbl header
+ * Auto-Generated stub implementations for functions defined in fm_configtable header
  */
 
-#include "fm_tbl.h"
+#include "fm_configtable.h"
 #include "utgenstub.h"
 
 /*

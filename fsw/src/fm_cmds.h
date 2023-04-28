@@ -25,6 +25,7 @@
 #define FM_CMDS_H
 
 #include "cfe.h"
+#include "fm_msg.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*                                                                 */
@@ -41,15 +42,14 @@
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_NOOP_CC, #FM_NoopCmd_t
  */
-bool FM_NoopCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_NoopCmd(const FM_NoopCmd_t *MsgPtr);
 
 /**
  *  \brief Reset Counters Command Handler Function
@@ -59,15 +59,14 @@ bool FM_NoopCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_RESET_COUNTERS_CC, #FM_ResetCountersCmd_t
  */
-bool FM_ResetCountersCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_ResetCountersCmd(const FM_ResetCountersCmd_t *MsgPtr);
 
 /**
  *  \brief Copy File Command Handler Function
@@ -85,15 +84,14 @@ bool FM_ResetCountersCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_COPY_FILE_CC, #FM_CopyFileCmd_t
  */
-bool FM_CopyFileCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_CopyFileCmd(const FM_CopyFileCmd_t *MsgPtr);
 
 /**
  *  \brief Move File Command Handler Function
@@ -104,15 +102,14 @@ bool FM_CopyFileCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_MOVE_FILE_CC, #FM_MoveFileCmd_t
  */
-bool FM_MoveFileCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_MoveFileCmd(const FM_MoveFileCmd_t *MsgPtr);
 
 /**
  *  \brief Rename File Command Handler Function
@@ -123,15 +120,14 @@ bool FM_MoveFileCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_RENAME_FILE_CC, #FM_RenameFileCmd_t
  */
-bool FM_RenameFileCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_RenameFileCmd(const FM_RenameFileCmd_t *MsgPtr);
 
 /**
  *  \brief Delete File Command Handler Function
@@ -141,15 +137,14 @@ bool FM_RenameFileCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_DELETE_FILE_CC, #FM_DeleteFileCmd_t
  */
-bool FM_DeleteFileCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_DeleteFileCmd(const FM_DeleteFileCmd_t *MsgPtr);
 
 /**
  *  \brief Delete All Files Command Handler Function
@@ -167,15 +162,14 @@ bool FM_DeleteFileCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_DELETE_ALL_FILES_CC, #FM_DeleteAllFilesCmd_t
  */
-bool FM_DeleteAllFilesCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_DeleteAllFilesCmd(const FM_DeleteAllFilesCmd_t *MsgPtr);
 
 /**
  *  \brief Decompress Files Command Handler Function
@@ -194,15 +188,14 @@ bool FM_DeleteAllFilesCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_DECOMPRESS_FILE_CC, #FM_DecompressFileCmd_t
  */
-bool FM_DecompressFileCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_DecompressFileCmd(const FM_DecompressFileCmd_t *MsgPtr);
 
 /**
  *  \brief Concatenate Files Command Handler Function
@@ -222,15 +215,14 @@ bool FM_DecompressFileCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_CONCAT_FILES_CC, #FM_ConcatFilesCmd_t
  */
-bool FM_ConcatFilesCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_ConcatFilesCmd(const FM_ConcatFilesCmd_t *MsgPtr);
 
 /**
  *  \brief Get File Information Command Handler Function
@@ -249,15 +241,14 @@ bool FM_ConcatFilesCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_GET_FILE_INFO_CC, #FM_GetFileInfoCmd_t, #FM_FileInfoPkt_t
  */
-bool FM_GetFileInfoCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_GetFileInfoCmd(const FM_GetFileInfoCmd_t *MsgPtr);
 
 /**
  *  \brief Get Open Files List Command Handler Function
@@ -268,15 +259,14 @@ bool FM_GetFileInfoCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_GET_OPEN_FILES_CC, #FM_GetOpenFilesCmd_t, #FM_OpenFilesPkt_t
  */
-bool FM_GetOpenFilesCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_GetOpenFilesCmd(const FM_GetOpenFilesCmd_t *MsgPtr);
 
 /**
  *  \brief Create Directory Command Handler Function
@@ -286,15 +276,14 @@ bool FM_GetOpenFilesCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_CREATE_DIRECTORY_CC, #FM_CreateDirectoryCmd_t
  */
-bool FM_CreateDirectoryCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_CreateDirectoryCmd(const FM_CreateDirectoryCmd_t *MsgPtr);
 
 /**
  *  \brief Delete Directory Command Handler Function
@@ -304,15 +293,14 @@ bool FM_CreateDirectoryCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_DELETE_DIRECTORY_CC, #FM_DeleteDirectoryCmd_t
  */
-bool FM_DeleteDirectoryCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_DeleteDirectoryCmd(const FM_DeleteDirectoryCmd_t *MsgPtr);
 
 /**
  *  \brief Get Directory List to Packet Command Handler Function
@@ -330,16 +318,15 @@ bool FM_DeleteDirectoryCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_GET_DIR_LIST_FILE_CC, #FM_GetDirListFileCmd_t,
  *      #FM_DirListFileStats_t, FM_DirListEntry_t
  */
-bool FM_GetDirListFileCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_GetDirListFileCmd(const FM_GetDirListFileCmd_t *MsgPtr);
 
 /**
  *  \brief Get Directory List to Packet Command Handler Function
@@ -358,15 +345,14 @@ bool FM_GetDirListFileCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_GET_DIR_LIST_PKT_CC, #FM_GetDirListPktCmd_t, #FM_DirListPkt_t
  */
-bool FM_GetDirListPktCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_GetDirListPktCmd(const FM_GetDirListPktCmd_t *MsgPtr);
 
 /**
  *  \brief Monitor Filesystem Command Handler Function
@@ -378,15 +364,14 @@ bool FM_GetDirListPktCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_MONITOR_FILESYSTEM_SPACE_CC, #FM_MonitorFilesystemSpaceCmd_t, #FM_MonitorReportPkt_t
  */
-bool FM_MonitorFilesystemSpaceCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_MonitorFilesystemSpaceCmd(const FM_MonitorFilesystemSpaceCmd_t *MsgPtr);
 
 /**
  *  \brief Set Table Entry State Command Handler Function
@@ -397,15 +382,14 @@ bool FM_MonitorFilesystemSpaceCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_SET_TABLE_STATE_CC, #FM_SetTableStateCmd_t, #FM_MonitorTableEntry_t
  */
-bool FM_SetTableStateCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_SetTableStateCmd(const FM_SetTableStateCmd_t *MsgPtr);
 
 /**
  *  \brief Set File Permissions of a file
@@ -415,14 +399,13 @@ bool FM_SetTableStateCmd(const CFE_SB_Buffer_t *BufPtr);
  *
  *  \par Assumptions, External Events, and Notes:
  *
- *  \param [in]  BufPtr Pointer to Software Bus command packet.
+ *  \param [in]  MsgPtr Pointer to Software Bus command packet.
  *
- *  \return Boolean command success response
- *  \retval true  Command successful
- *  \retval false Command not successful
+ *  \returns CFE status response
+ *  \retval #CFE_SUCCESS  Command successful
  *
  *  \sa #FM_SET_PERMISSIONS_CC, #FM_SetPermissionsCmd_t, #FM_SET_PERM_CMD_EID, #FM_SET_PERM_ERR_EID
  */
-bool FM_SetPermissionsCmd(const CFE_SB_Buffer_t *BufPtr);
+CFE_Status_t FM_SetPermissionsCmd(const FM_SetPermissionsCmd_t *MsgPtr);
 
 #endif
