@@ -1333,7 +1333,7 @@
             <Variable type="BASE_TYPES/uint16" readOnly="true" name="SendHkTopicId" initialValue="${CFE_MISSION/FM_SEND_HK_TOPICID}" />
             <Variable type="BASE_TYPES/uint16" readOnly="true" name="HkTlmTopicId" initialValue="${CFE_MISSION/FM_HK_TLM_TOPICID}" />
             <Variable type="BASE_TYPES/uint16" readOnly="true" name="FileInfoTlmTopicId" initialValue="${CFE_MISSION/FM_FILE_INFO_TLM_TOPICID}" />
-            <Variable type="BASE_TYPES/uint16" readOnly="true" name="DirListTlmTopicId" initialValue="${CFE_MISSION/FM_DIR_LIST_TLM_TOPICID)}" />
+            <Variable type="BASE_TYPES/uint16" readOnly="true" name="DirListTlmTopicId" initialValue="${CFE_MISSION/FM_DIR_LIST_TLM_TOPICID}" />
             <Variable type="BASE_TYPES/uint16" readOnly="true" name="OpenFilesTlmTopicId" initialValue="${CFE_MISSION/FM_OPEN_FILES_TLM_TOPICID}" />
             <Variable type="BASE_TYPES/uint16" readOnly="true" name="MonitorTlmTopicId" initialValue="${CFE_MISSION/FM_MONITOR_TLM_TOPICID}" />
           </VariableSet>

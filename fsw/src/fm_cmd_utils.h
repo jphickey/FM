@@ -405,7 +405,7 @@ void FM_AppendPathSep(char *Directory, uint32 BufferSize);
  *  \returns Status code
  *  \retval CFE_SUCCESS if successful
  */
-int32 FM_GetVolumeFreeSpace(const char *FileSys, uint64 *BlockCount, uint64 *ByteCount);
+CFE_Status_t FM_GetVolumeFreeSpace(const char *FileSys, uint64 *BlockCount, uint64 *ByteCount);
 
 /**
  *  \brief Estimate the disk space used by files in a specified directory
@@ -429,6 +429,6 @@ int32 FM_GetVolumeFreeSpace(const char *FileSys, uint64 *BlockCount, uint64 *Byt
  *  \returns Status code
  *  \retval CFE_SUCCESS if successful
  */
-int32 FM_GetDirectorySpaceEstimate(const char *Directory, uint64 *BlockCount, uint64 *ByteCount);
+CFE_Status_t FM_GetDirectorySpaceEstimate(const char *Directory, uint64 *BlockCount, uint64 *ByteCount);
 
 #endif

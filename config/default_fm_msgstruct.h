@@ -104,7 +104,6 @@ typedef struct
     CFE_MSG_CommandHeader_t CommandHeader; /**< \brief Command header */
 
     FM_OvwSourceTargetFilename_Payload_t Payload; /**< \brief Command payload */
-
 } FM_MoveFileCmd_t;
 
 /**

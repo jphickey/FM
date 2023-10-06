@@ -25,6 +25,7 @@
 #define FM_CONFIGTABLE_H
 
 #include "common_types.h"
+#include "cfe_error.h"
 #include "fm_tbl.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -49,7 +50,7 @@
  *
  *  \sa /FM_AppInit
  */
-int32 FM_TableInit(void);
+CFE_Status_t FM_TableInit(void);
 
 /**
  *  \brief Table Verification Function
@@ -70,7 +71,7 @@ int32 FM_TableInit(void);
  *
  *  \sa /FM_AppInit
  */
-int32 FM_ValidateTable(FM_MonitorTable_t *TablePtr);
+CFE_Status_t FM_ValidateTable(FM_MonitorTable_t *TablePtr);
 
 /**
  *  \brief Acquire Table Data Pointer Function
