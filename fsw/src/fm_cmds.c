@@ -553,8 +553,8 @@ CFE_Status_t FM_GetOpenFilesCmd(const FM_GetOpenFilesCmd_t *MsgPtr)
     CFE_SB_TimeStampMsg(CFE_MSG_PTR(FM_GlobalData.OpenFilesPkt.TelemetryHeader));
     CFE_SB_TransmitMsg(CFE_MSG_PTR(FM_GlobalData.OpenFilesPkt.TelemetryHeader), true);
 
-    /* Send command completion event (debug) */
-    CFE_EVS_SendEvent(FM_GET_OPEN_FILES_CMD_EID, CFE_EVS_EventType_DEBUG, "%s command", CmdText);
+    /* Send command completion event (info) */
+    CFE_EVS_SendEvent(FM_GET_OPEN_FILES_CMD_INF_EID, CFE_EVS_EventType_INFORMATION, "%s command", CmdText);
 
     return CFE_SUCCESS;
 }
@@ -847,8 +847,8 @@ CFE_Status_t FM_MonitorFilesystemSpaceCmd(const FM_MonitorFilesystemSpaceCmd_t *
         CFE_SB_TimeStampMsg(CFE_MSG_PTR(FM_GlobalData.MonitorReportPkt.TelemetryHeader));
         CFE_SB_TransmitMsg(CFE_MSG_PTR(FM_GlobalData.MonitorReportPkt.TelemetryHeader), true);
 
-        /* Send command completion event (debug) */
-        CFE_EVS_SendEvent(FM_MONITOR_FILESYSTEM_SPACE_CMD_EID, CFE_EVS_EventType_DEBUG, "%s command", CmdText);
+        /* Send command completion event (info) */
+        CFE_EVS_SendEvent(FM_MONITOR_FILESYSTEM_SPACE_CMD_INF_EID, CFE_EVS_EventType_INFORMATION, "%s command", CmdText);
     }
 
     return FM_CommandResultToStatus(CommandResult);

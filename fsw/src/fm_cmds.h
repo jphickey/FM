@@ -404,7 +404,7 @@ CFE_Status_t FM_SetTableStateCmd(const FM_SetTableStateCmd_t *MsgPtr);
  *  \returns CFE status response
  *  \retval #CFE_SUCCESS  Command successful
  *
- *  \sa #FM_SET_PERMISSIONS_CC, #FM_SetPermissionsCmd_t, #FM_SET_PERM_CMD_EID, #FM_SET_PERM_ERR_EID
+ *  \sa #FM_SET_PERMISSIONS_CC, #FM_SetPermissionsCmd_t, #FM_SET_PERM_CMD_INF_EID, #FM_SET_PERM_ERR_EID
  */
 CFE_Status_t FM_SetPermissionsCmd(const FM_SetPermissionsCmd_t *MsgPtr);
 
