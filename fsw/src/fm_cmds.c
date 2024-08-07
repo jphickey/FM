@@ -74,7 +74,7 @@ CFE_Status_t FM_NoopCmd(const FM_NoopCmd_t *MsgPtr)
 {
     const char *CmdText = "No-op";
 
-    CFE_EVS_SendEvent(FM_NOOP_CMD_EID, CFE_EVS_EventType_INFORMATION, "%s command: FM version %d.%d.%d.%d", CmdText,
+    CFE_EVS_SendEvent(FM_NOOP_INF_EID, CFE_EVS_EventType_INFORMATION, "%s command: FM version %d.%d.%d.%d", CmdText,
                       FM_MAJOR_VERSION, FM_MINOR_VERSION, FM_REVISION, FM_MISSION_REV);
 
     return CFE_SUCCESS;
@@ -98,7 +98,7 @@ CFE_Status_t FM_ResetCountersCmd(const FM_ResetCountersCmd_t *MsgPtr)
     FM_GlobalData.ChildCmdWarnCounter = 0;
 
     /* Send command completion event (debug) */
-    CFE_EVS_SendEvent(FM_RESET_CMD_EID, CFE_EVS_EventType_DEBUG, "%s command", CmdText);
+    CFE_EVS_SendEvent(FM_RESET_INF_EID, CFE_EVS_EventType_DEBUG, "%s command", CmdText);
 
     return CFE_SUCCESS;
 }
@@ -404,10 +404,8 @@ CFE_Status_t FM_DecompressFileCmd(const FM_DecompressFileCmd_t *MsgPtr)
 
         /* Set handshake queue command args */
         CmdArgs->CommandCode = FM_DECOMPRESS_FILE_CC;
-        strncpy(CmdArgs->Source1, CmdPtr->Source, OS_MAX_PATH_LEN - 1);
-        CmdArgs->Source1[OS_MAX_PATH_LEN - 1] = '\0';
-        strncpy(CmdArgs->Target, CmdPtr->Target, OS_MAX_PATH_LEN - 1);
-        CmdArgs->Target[OS_MAX_PATH_LEN - 1] = '\0';
+        snprintf(CmdArgs->Source1, OS_MAX_PATH_LEN, "%s", CmdPtr->Source);
+        snprintf(CmdArgs->Target, OS_MAX_PATH_LEN, "%s", CmdPtr->Target);
 
         /* Invoke lower priority child task */
         FM_InvokeChildTask();
@@ -848,7 +846,8 @@ CFE_Status_t FM_MonitorFilesystemSpaceCmd(const FM_MonitorFilesystemSpaceCmd_t *
         CFE_SB_TransmitMsg(CFE_MSG_PTR(FM_GlobalData.MonitorReportPkt.TelemetryHeader), true);
 
         /* Send command completion event (info) */
-        CFE_EVS_SendEvent(FM_MONITOR_FILESYSTEM_SPACE_CMD_INF_EID, CFE_EVS_EventType_INFORMATION, "%s command", CmdText);
+        CFE_EVS_SendEvent(FM_MONITOR_FILESYSTEM_SPACE_CMD_INF_EID, CFE_EVS_EventType_INFORMATION, "%s command",
+                          CmdText);
     }
 
     return FM_CommandResultToStatus(CommandResult);
